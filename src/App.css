@@ -1,7 +1,8 @@
 @font-face {
   font-family: "Comnic Mono";
-  src: url("./fonts/ComicMono.ttf");
+  src: url("./assets/fonts/ComicMono.ttf");
 }
+
 .html  {
   font-family: "Comnic Mono";
 }
