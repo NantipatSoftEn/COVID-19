@@ -1,5 +1,5 @@
 import React from "react";
-import List from "./List";
+
 import WithLoading from "../hocs/WithLoading";
 class FetchBoard extends React.Component {
   constructor(props) {
@@ -12,13 +12,13 @@ class FetchBoard extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://covid19.th-stat.com/api/open/cases/sum")
+    fetch(this.props.api)
       .then((res) => res.json())
       .then(
         (result) => {
           this.setState({
             isLoaded: true,
-            items: result.Province,
+            items: result,
           });
         },
         (error) => {
@@ -32,9 +32,7 @@ class FetchBoard extends React.Component {
   }
 
   render() {
-    const ListWithLoading = WithLoading(List);
-    console.log(`items=`,this.state.items);
-    
+    const ListWithLoading = WithLoading(this.props.list);
     return (
       <ListWithLoading
         error={this.state.error}
