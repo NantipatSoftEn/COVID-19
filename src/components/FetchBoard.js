@@ -1,6 +1,7 @@
 import React from "react";
-
-class MyComponent extends React.Component {
+import List from "./List";
+import WithLoading from "../hocs/WithLoading";
+class FetchBoard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,10 +21,8 @@ class MyComponent extends React.Component {
             items: result.Province,
           });
         },
-
         (error) => {
           console.log(`error=${error}`);
-
           this.setState({
             isLoaded: true,
             error,
@@ -33,23 +32,17 @@ class MyComponent extends React.Component {
   }
 
   render() {
-    const { error, isLoaded, items } = this.state;
-    if (error) {
-      return <div>Error: {error.message}</div>;
-    } else if (!isLoaded) {
-      return <div>Loading...</div>;
-    } else {
-      return (
-        <ul>
-          {Object.keys(items).map((key,index) => (
-            <li key={index}>
-              {key} {items[key]}
-            </li>
-          ))}
-        </ul>
-      );
-    }
+    const ListWithLoading = WithLoading(List);
+    console.log(`items=`,this.state.items);
+    
+    return (
+      <ListWithLoading
+        error={this.state.error}
+        isLoaded={this.state.isLoaded}
+        items={this.state.items}
+      />
+    );
   }
 }
 
-export default MyComponent;
+export default FetchBoard;

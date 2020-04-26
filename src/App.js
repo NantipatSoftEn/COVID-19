@@ -1,5 +1,5 @@
 import React from "react";
-import Mycomponent from './components/Mycomponent'
+import FetchBoard from './components/FetchBoard'
 import "./App.css";
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <h1 className="text-4xl font-bold text-center text-blue-500">
         Hello Tailwind!
       </h1>
-      <Mycomponent />
+      <FetchBoard />
     </div>
   );
 }
