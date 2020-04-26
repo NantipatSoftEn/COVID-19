@@ -1,6 +1,6 @@
 import React from 'react';
 import Menu from '../Menu'
-const SubManu = () => {
+const GroupMenu = () => {
 
   return (
     <div
@@ -13,8 +13,9 @@ const SubManu = () => {
          <Menu name="Analytics" icon="fa fa-envelope" hover="hover:border-green-500" />
          <Menu name="Payments" icon="fa fa-wallet" hover="hover:border-red-500" />
       </ul>
+      
     </div>
   );
 };
 
-export default SubManu;
+export default GroupMenu;
