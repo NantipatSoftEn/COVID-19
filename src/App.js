@@ -1,5 +1,5 @@
 import React from "react";
-import Main from "./components/Layout/Main";
+import Main from "./Layout/Main";
 import FetchBoard from "./components/FetchBoard";
 import ListProvince from "./components/ListProvince";
 import "./App.css";

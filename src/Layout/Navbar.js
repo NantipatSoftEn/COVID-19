@@ -1,5 +1,5 @@
 import React from 'react';
-import SubMenu from '../SubMenu';
+import SubMenu from '../Interface/Navbar/SubMenu';
 const Navbar = () => {
   return (
     <nav id="header" class="bg-white fixed w-full z-10 top-0 shadow">
