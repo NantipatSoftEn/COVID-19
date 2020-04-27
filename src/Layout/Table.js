@@ -2,44 +2,44 @@ import React from 'react';
 const Table = () => {
   return (
     <div class="w-full p-3">
-      <div class="bg-white border rounded shadow">
-        <div class="border-b p-3">
-          <h5 class="font-bold uppercase text-gray-600">Table</h5>
-        </div>
-        <div class="p-5">
-          <table class="w-full p-5 text-gray-700">
-            <thead>
-              <tr>
-                <th class="text-left text-blue-900">Name</th>
-                <th class="text-left text-blue-900">Side</th>
-                <th class="text-left text-blue-900">Role</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td>Obi Wan Kenobi</td>
-                <td>Light</td>
-                <td>Jedi</td>
-              </tr>
-              <tr>
-                <td>Greedo</td>
-                <td>South</td>
-                <td>Scumbag</td>
-              </tr>
-              <tr>
-                <td>Darth Vader</td>
-                <td>Dark</td>
-                <td>Sith</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <p class="py-2">
-            <a href="#">See More issues...</a>
-          </p>
-        </div>
-      </div>
+        <div class="shadow overflow-hidden rounded border-b border-gray-200">
+    <table class="min-w-full bg-white">
+      <thead class="bg-gray-800 text-white">
+        <tr>
+          <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Name</th>
+          <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Last name</th>
+          <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Phone</th>
+          <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Email</th>
+        </tr>
+      </thead>
+    <tbody class="text-gray-700">
+      <tr>
+        <td class="w-1/3 text-left py-3 px-4">Lian</td>
+        <td class="w-1/3 text-left py-3 px-4">Smith</td>
+        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
+        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+      </tr>
+      <tr class="bg-gray-100">
+        <td class="w-1/3 text-left py-3 px-4">Emma</td>
+        <td class="w-1/3 text-left py-3 px-4">Johnson</td>
+        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
+        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+      </tr>
+      <tr>
+        <td class="w-1/3 text-left py-3 px-4">Oliver</td>
+        <td class="w-1/3 text-left py-3 px-4">Williams</td>
+        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
+        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+      </tr>
+      <tr class="bg-gray-100">
+        <td class="w-1/3 text-left py-3 px-4">Isabella</td>
+        <td class="w-1/3 text-left py-3 px-4">Brown</td>
+        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="tel:622322662">622322662</a></td>
+        <td class="text-left py-3 px-4"><a class="hover:text-blue-500" href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
     </div>
   );
 };
