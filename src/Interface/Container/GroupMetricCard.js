@@ -2,7 +2,7 @@ import React from 'react';
 import MetricCard from '../MetricCard';
 const GroupMetricCard = () => {
   return (
-    <div class="flex flex-wrap">
+    <div className="flex flex-wrap">
       <MetricCard
         name="Total Revenue"
         icon="fa fa-wallet fa-2x fa-fw fa-inverse"

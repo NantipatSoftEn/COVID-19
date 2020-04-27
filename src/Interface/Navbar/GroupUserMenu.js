@@ -1,6 +1,7 @@
 import React from 'react';
 import UserMenu from '../UserMenu';
 const GroupMenu = () => {
+  
   return (
     <div
       id="userMenu"
