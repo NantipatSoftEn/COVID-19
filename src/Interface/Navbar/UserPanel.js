@@ -1,16 +1,16 @@
 import React, {useState} from 'react';
 import UserButton from '../UserButton';
+import Dropdown from '../Dropdown';
 const UserPanel = () => {
-  const [hidden,setHidden] = useState(true);
-  console.log(`hidden=${hidden}`);
-  
+  const [visible, setVisible] = useState(false);
+  console.log(`visible=${visible}`);
   return (
     <div className="w-1/2 pr-0">
       <div className="flex relative inline-block float-right">
         <div className="relative text-sm">
           {/* <UserButton  /> */}
           <button
-            onClick={() => setHidden(false)}
+            onClick={visible ? () => setVisible(false) :() => setVisible(true) }
             id="userButton"
             className="flex items-center focus:outline-none mr-3">
             <img
@@ -30,40 +30,35 @@ const UserPanel = () => {
               </g>
             </svg>
           </button>
-          {!hidden ? (
-            <div
-              id="userMenu"
-              className="bg-white rounded shadow-md mt-2 absolute mt-12 top-0 right-0 min-w-full overflow-auto z-30 invisible">
-              <ul className="list-reset">
-                <li>
-                  <a
-                    href="#"
-                    className="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">
-                    My account
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">
-                    Notifications
-                  </a>
-                </li>
-                <li>
-                  <hr className="border-t mx-2 border-gray-400" />
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">
-                    Logout
-                  </a>
-                </li>
-              </ul>
-            </div>
-          ) : (
-            ``
-          )}
+          {/* <Dropdown toggle={Invisible}/> */}
+          <div className={"bg-white rounded shadow-md mt-2 absolute mt-12 top-0 right-0 min-w-full overflow-auto z-30 " + (visible ? null : "invisible")}>
+            <ul className="list-reset">
+              <li>
+                <a
+                  href="#"
+                  className="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">
+                  My account
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">
+                  Notifications
+                </a>
+              </li>
+              <li>
+                <hr className="border-t mx-2 border-gray-400" />
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="block lg:hidden pr-4">
