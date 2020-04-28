@@ -3,6 +3,7 @@ import Menu from '../Menu'
 const GroupMenu = () => {
 
   return (
+    
     <div
       className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white z-20"
       id="nav-content">
